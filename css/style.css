@@ -11,3 +11,37 @@
 {
 	border-color: #009973;
 }
+
+.theme-1
+{
+	font-weight: bolder;
+	font-size: x-large;
+	hr: 20px;
+}
+
+.theme-2
+{
+	font-weight: bold;
+}
+.align-1
+{
+	margin-left: 25%;
+	margin-right: auto;
+}
+
+/* media classes
+*/
+@media (max-width:880px){
+
+	.align-1
+	{
+		margin-left: 1%;
+		margin-right: auto;
+	}
+
+}
+
+.align-2
+{
+	align-content: center;
+}
