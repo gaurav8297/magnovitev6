@@ -1,1 +1,1 @@
-# Magnovitev6
+# Magnovite v6
