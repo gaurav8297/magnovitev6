@@ -37,6 +37,12 @@
     $("#kenburnsy-bg").kenburnsy({
         fullscreen: true
     });
+
+    // countdown setup start
+    $("#countdown").countdown({
+        date: "28 July 2017 12:00:00", // countdown target date settings
+        format: "on"
+    }, function() {});
 	
     // owlCarousel welcome slides
     $(".welcome-slides").owlCarousel({

@@ -1,4 +1,6 @@
 /*
+  countdown
+  Knob
   Swiper v3.3.1
   jQuery Knob v1.2.13
   kenburnsy v0.0.5
@@ -11,6 +13,15 @@
   device v0.2.7
   Bootstrap v3.3.6
 */
+
+/* Countdown */
+!function(e){e.fn.countdown=function(s){function n(){eventDate=Date.parse(t.date)/1e3,currentDate=Math.floor(e.now()/1e3),seconds=eventDate-currentDate,days=Math.floor(seconds/86400),seconds-=60*days*60*24,hours=Math.floor(seconds/3600),seconds-=60*hours*60,minutes=Math.floor(seconds/60),seconds-=60*minutes,this_sel.find("#days").val(days).trigger("change"),this_sel.find("#hours").val(hours).trigger("change"),this_sel.find("#mins").val(minutes).trigger("change"),this_sel.find("#secs").val(seconds).trigger("change")}var t={date:null};s&&e.extend(t,s),this_sel=e(this),n(),interval=setInterval(n,1e3)}}(jQuery);
+
+
+/* Knob */
+$(function(){"use strict";$(".knob").knob({change:function(){},release:function(t){console.log("release : "+t)},cancel:function(){console.log("cancel : ",this)},draw:function(){if("tron"==this.$.data("skin")){var t,i=this.angle(this.cv),s=this.startAngle,h=this.startAngle,n=h+i,e=1;return this.g.lineWidth=this.lineWidth,this.o.cursor&&(h=n-.3)&&(n+=.3),this.o.displayPrevious&&(t=this.startAngle+this.angle(this.v),this.o.cursor&&(s=t-.3)&&(t+=.3),this.g.beginPath(),this.g.strokeStyle=this.pColor,this.g.arc(this.xy,this.xy,this.radius-this.lineWidth,s,t,!1),this.g.stroke()),this.g.beginPath(),this.g.strokeStyle=e?this.o.fgColor:this.fgColor,this.g.arc(this.xy,this.xy,this.radius-this.lineWidth,h,n,!1),this.g.stroke(),this.g.lineWidth=2,this.g.beginPath(),this.g.strokeStyle=this.o.fgColor,this.g.arc(this.xy,this.xy,this.radius-this.lineWidth+1+2*this.lineWidth/3,0,2*Math.PI,!1),this.g.stroke(),!1}}});var t,i=0,s=0,h=0,n=$("div.idir"),e=$("div.ival"),o=function(){h++,n.show().html("+").fadeOut(),e.html(h)},r=function(){h--,n.show().html("-").fadeOut(),e.html(h)};$("input.infinite").knob({min:0,max:20,stopper:!1,change:function(){t>this.cv?i?(r(),i=0):(i=1,s=0):t<this.cv&&(s?(o(),s=0):(s=1,i=0)),t=this.cv}})}); 
+
+
 
 
 // Swiper v3.3.1
